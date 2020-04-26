@@ -1,0 +1,23 @@
+<form id="CreateTask" method="post" action="/">
+	<input type="hidden" name="id" value="<?= $this->result['id']?>">
+	<div class="form-group">
+		<label for="UserName">Имя пользователя</label>
+		<input aria-describedby="loginHelp" class="form-control" id="UserName" name="user_name"
+		       placeholder="Введите имя пользователя" required
+		       type="text" value="<?= $this->result['user_name']?>"/>
+	</div>
+	<div class="form-group">
+		<label for="Email">Email пользователя</label>
+		<input  name="email" required type="email" class="form-control" id="Email" aria-describedby="loginHelp"
+		       placeholder="Введите email пользователя" value="<?= $this->result['email']?>"/>
+	</div>
+	<div class="form-group">
+		<label for="TaskText">Текст задачи</label>
+		<textarea name="text" required class="form-control" id="TaskText" rows="3"><?= $this->result['text']?></textarea>
+	</div>
+	<div class="form-group">
+		<label for="status">Выполнено</label>
+		<input  <?= $this->result['status'] ? 'checked':''?>
+				value="true" id="status" name="status" type="checkbox"></div>
+	<button type="submit" class="btn btn-dark">Изменить задачу</button>
+</form>

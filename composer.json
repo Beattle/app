@@ -1,0 +1,10 @@
+{
+    "require": {
+        "nikic/fast-route": "^1.3",
+        "gabordemooij/redbean": "^5.4",
+        "stephweb/daw-php-pagination": "3.0.*"
+    },
+    "autoload": {
+        "psr-4": {"Model\\": "Application/Model/"}
+    }
+}
