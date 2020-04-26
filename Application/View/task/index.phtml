@@ -79,6 +79,9 @@
 			<?php endif; ?>
 			<div class="col col-12">Email:<?= $table['email'] ?></div>
 			<div class="col col-12">Статус: <?= $table['status'] ?'Выполнено':'Не выполнено' ?></div>
+			<?php if($table['admin_edit']):?>
+				<div class="col col-12">Дополнительно: Отредактировано администратором</div>
+			<?php endif;?>
 			<div class="col col-12">Текст задачи:</div>
 			<div class="col col-12"><?= $table['text'] ?></div>
 

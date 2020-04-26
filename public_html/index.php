@@ -62,7 +62,7 @@ switch ($routeInfo[0]) {
 
 		$loader->register();
 		list($result,$action) = call_user_func_array(array(new $class, $method), $vars);
-		require APP_PATH."View/init.php";
+		require APP_PATH."View/Init.php";
 		new View($class,$result,$action);
 
 		// ... call $handler with $vars
