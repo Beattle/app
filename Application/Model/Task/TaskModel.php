@@ -5,28 +5,21 @@ use DawPhpPagination\Pagination;
 
 class TaskModel
 {
-	const sort_params = ['name', 'email', 'status'];
 
-	public static function getList(): array
+	public static function getList($sort_type,$order_by,$nav_count): array
 	{
 		$res = [];
 
 
-		$pagination = new Pagination(['pp' => 3, 'options_select' => [1, 3, 5], 'number_links' => 1]);
+		$pagination = new Pagination(['pp' => $nav_count, 'options_select' => [1, 3, 5], 'number_links' => 1]);
 		$pagination->paginate(R::count('app_tasks'));
 
-
-		$sort_type = $_GET['user_name'] ?? $_GET['email'] ?? $_GET['status'] ?? 0;
-		$order_by = '';
-		if ($sort_type) {
-			$order_by = array_search($sort_type, $_GET);
-		}
 
 		$limit = $pagination->getLimit();
 		$offset = $pagination->getOffset();
 		$query = "SELECT * FROM app_tasks ";
 		if (!empty($order_by)) {
-			$query .= " ORDER BY $order_by $sort_type";
+			$query .= " ORDER BY $order_by COLLATE NOCASE $sort_type ";
 		}
 		$query .= " LIMIT $limit OFFSET $offset";
 
@@ -39,8 +32,11 @@ class TaskModel
 	public function updateTask($post_data)
 	{
 
-		$task = R::load('app_tasks', $post_data['id']); //reloads our book
-		$task['status'] = $post_data['status'];
+		$task = R::load('app_tasks', $post_data['id']);
+		if(isset($post_data['status'])){
+			$task['status'] = $post_data['status'];
+		}
+
 		if(isset($post_data['text'])){
 			if($post_data['text'] !== $task['text']){
 				$task['text'] = $post_data['text'];
@@ -68,7 +64,7 @@ class TaskModel
 		return R::store($task);
 	}
 
-	public function getTask($post_data)
+	public static function getTask($post_data)
 	{
 		$task =  R::getRow( 'SELECT * FROM app_tasks WHERE id = ? LIMIT 1',
 			[ $post_data['id'] ]

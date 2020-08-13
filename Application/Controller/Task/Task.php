@@ -2,7 +2,6 @@
 
 use RedBeanPHP\R;
 
-# namespace app;
 class Task
 {
 	const sort_params = ['user_name','email','status'];
@@ -10,7 +9,12 @@ class Task
 
 	public function renderTaskList()
 	{
-		$res = TaskModel::getList();
+		$sort_type = $_GET['user_name'] ?? $_GET['email'] ?? $_GET['status'] ?? 0;
+		$order_by = '';
+		if ($sort_type) {
+			$order_by = array_search($sort_type, $_GET);
+		}
+		$res = TaskModel::getList($sort_type,$order_by,$nav_count = 3);
 		$res['sort'] = $this->getSortingQuery();
 		$action = 'index';
 		if (isset($_SESSION['success'])) {
@@ -76,14 +80,17 @@ class Task
 
 	/**
 	 */
-	public function updateTask(){
+	public function updateTask()  {
 		if(!isset($_SESSION['user'])){
 			$res['errors'] = 'Нет доступа к редактированию задачи';
 			return [$res,'403'];
 		}
 
 		$post_data['id'] = (int)$_POST['id'];
-		$post_data['status'] = $_POST['status'] === 'true'? 1:0;
+		if(isset($_POST['status'])){
+			$post_data['status'] = $_POST['status'] === 'true'? 1:0;
+		}
+
 		if(isset($_POST['user_name'])){
 			$post_data['user_name'] = $_POST['user_name'];
 		}
@@ -104,9 +111,8 @@ class Task
 	}
 
 	public function editTask(){
-		$res = [];
 		$post_data['id'] = (int)$_GET['id'];
-		$res = (new TaskModel())->getTask($post_data);
+		$res = TaskModel::getTask($post_data);
 		return [$res,'form'];
 	}
 

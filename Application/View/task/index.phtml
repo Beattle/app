@@ -13,7 +13,7 @@
 		<div class="col col-12 alert alert-success" role="alert">
 			<?= $this->result['success']; ?>
 		</div>
-	</div><!---->
+	</div>
 <?php endif; ?>
 
 <?php if (isset($this->result['update'])): ?>
@@ -21,34 +21,13 @@
 		<div class="col col-12 alert alert-success" role="alert">
 			<?= $this->result['update']; ?>
 		</div>
-	</div><!---->
-<?php endif; ?>
-<div class="row">
-	<div class="col col-12">
-		<form id="CreateTask" method="post" action="/form">
-			<div class="form-group">
-				<label for="UserName">Имя пользователя</label>
-				<input aria-describedby="loginHelp" class="form-control" id="UserName" name="user_name"
-				       placeholder="Введите имя пользователя" required
-				       type="text"/>
-			</div>
-			<div class="form-group">
-				<label for="Email">Email пользователя</label>
-				<input name="email" required type="email" class="form-control" id="Email" aria-describedby="loginHelp"
-				       placeholder="Введите email пользователя"/>
-			</div>
-			<div class="form-group">
-				<label for="TaskText">Текст задачи</label>
-				<textarea name="text" required class="form-control" id="TaskText" rows="3"></textarea>
-			</div>
-			<button type="submit" class="btn btn-dark">Создать новую задачу</button>
-		</form>
 	</div>
-</div>
+<?php endif; ?>
+
 <div class="row mb-3 mt-3 ">
 	<span>Сортировать по:</span>
 	<a class="ml-2 mr-2" href="?user_name=<?= $this->result['sort']['user_name']['type'] ?>"
-	><span>Имя пользователя</span> <!--<i class="fas fa-arrow-up"></i>-->
+	><span>Имя пользователя</span>
 	</a>
 	<a class="mr-2" href="?email=<?= $this->result['sort']['email']['type'] ?>"
 	><span>email</span></a>
@@ -59,7 +38,6 @@
 <?php foreach ($this->result['items'] as $table): ?>
 	<div class="row d-flex justify-content-center">
 		<div class="p-3 bg-dark text-white  col col-12 mb-3 row">
-			<?php // foreach ($table['items'] as $item) :?>
 			<div class="col col-8"><span>Имя: <?= $table['user_name'] ?></div>
 			<?php if (isset($_SESSION['user'])): ?>
 				<div class="col col-2 text-right">
@@ -89,4 +67,27 @@
 	</div>
 <?php endforeach; ?>
 <?php echo $this->result['page_nav']->render(['user_name', 'email', 'status']); ?>
+<div class="row">
+	<div class="col col-12 text-center mt-3"><b>Новая задача</b></div>
+	<div class="col col-12">
+		<form id="CreateTask" method="post" action="/form">
+			<div class="form-group">
+				<label for="UserName">Имя пользователя</label>
+				<input aria-describedby="loginHelp" class="form-control" id="UserName" name="user_name"
+				       placeholder="Введите имя пользователя" required
+				       type="text"/>
+			</div>
+			<div class="form-group">
+				<label for="Email">Email пользователя</label>
+				<input name="email" required type="email" class="form-control" id="Email" aria-describedby="loginHelp"
+				       placeholder="Введите email пользователя"/>
+			</div>
+			<div class="form-group">
+				<label for="TaskText">Текст задачи</label>
+				<textarea name="text" required class="form-control" id="TaskText" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-dark">Создать новую задачу</button>
+		</form>
+	</div>
+</div>
 

@@ -10,17 +10,19 @@ class User
 	public function auth(){
 		$login = trim($_POST['login']);
 		$pass = trim($_POST['password']);
-		$admin = R::findOne('users',' login = ?',[$login]);
-		if(!$admin){
+		$user = R::findOne('users',' login = ?',[$login]);
+		if(!$user){
 			$res['errors'] = 'Пользователь не найден';
 			return [$res,'login'];
 		}
-		if(password_verify($pass,$admin['pass'])){
+		if(password_verify($pass,$user['pass'])){
 					$_SESSION['auth'] = true;
-					$_SESSION['user'] = $admin['login'];
+					$_SESSION['user'] = $user['login'];
 			header("Location: http://".BASE_URI);
 		}
 
+		$res['errors'] = 'Пароль не верный';
+		return [$res,'login'];
 	}
 
 	public function logout(){
