@@ -67,7 +67,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="hIBbNpujsFCLhCn2ebeE-34" value="Администратор" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="590" width="120" height="60" as="geometry" />
+          <mxGeometry x="650" y="590" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hIBbNpujsFCLhCn2ebeE-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-35" target="hIBbNpujsFCLhCn2ebeE-37">
           <mxGeometry relative="1" as="geometry" />
