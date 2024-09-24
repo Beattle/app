@@ -36,21 +36,16 @@
         <mxCell id="hIBbNpujsFCLhCn2ebeE-31" value="База данных" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="70" y="357.5" width="100" height="142.5" as="geometry" />
         </mxCell>
-        <mxCell id="hIBbNpujsFCLhCn2ebeE-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="hIBbNpujsFCLhCn2ebeE-35">
+        <mxCell id="hIBbNpujsFCLhCn2ebeE-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-69" target="hIBbNpujsFCLhCn2ebeE-72">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="690" y="620" as="sourcePoint" />
+            <mxPoint x="380" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="hIBbNpujsFCLhCn2ebeE-58" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="hIBbNpujsFCLhCn2ebeE-36">
-          <mxGeometry x="-0.0008" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+        <mxCell id="hIBbNpujsFCLhCn2ebeE-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;exitX=0;exitY=0.3;exitDx=0;exitDy=0;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-72" target="hIBbNpujsFCLhCn2ebeE-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180.0000000000001" y="620.0322580645162" as="sourcePoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="hIBbNpujsFCLhCn2ebeE-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-35" target="hIBbNpujsFCLhCn2ebeE-37">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="hIBbNpujsFCLhCn2ebeE-35" value="Рассылка" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="590" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hIBbNpujsFCLhCn2ebeE-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-37" target="hIBbNpujsFCLhCn2ebeE-38">
           <mxGeometry relative="1" as="geometry" />
@@ -64,11 +59,15 @@
         <mxCell id="hIBbNpujsFCLhCn2ebeE-39" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="30" y="770" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="hIBbNpujsFCLhCn2ebeE-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-35" target="hIBbNpujsFCLhCn2ebeE-38">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="hIBbNpujsFCLhCn2ebeE-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-72" target="hIBbNpujsFCLhCn2ebeE-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180.0000000000001" y="650.0000000000001" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="hIBbNpujsFCLhCn2ebeE-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-35" target="hIBbNpujsFCLhCn2ebeE-39">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="hIBbNpujsFCLhCn2ebeE-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.15;exitY=0.95;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;exitPerimeter=0;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-72" target="hIBbNpujsFCLhCn2ebeE-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240.0000000000001" y="650.0000000000001" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="hIBbNpujsFCLhCn2ebeE-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hIBbNpujsFCLhCn2ebeE-62" target="3">
           <mxGeometry relative="1" as="geometry" />
@@ -80,7 +79,10 @@
           <mxGeometry x="460" y="30" width="20" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hIBbNpujsFCLhCn2ebeE-69" value="Администратор" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="760" y="590" width="30" height="60" as="geometry" />
+          <mxGeometry x="440" y="590" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hIBbNpujsFCLhCn2ebeE-72" value="Рассылка" style="shape=message;html=1;html=1;outlineConnect=0;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="180" y="600" width="130" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
